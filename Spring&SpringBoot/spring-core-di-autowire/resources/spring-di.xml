@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="stud" class="com.institute.bean.Student" primary="true">
+        	<property name="id" value="121"></property>
+        	<property name="name" value="Xyz"></property>
+        	<property name="address" ref="addr"></property> <!--DI by using SI  -->
+        	<property name="higherEdu" ref="edudtl"></property><!-- DI by using SI -->
+        </bean>
+        <bean id="addr" class="com.institute.bean.Address">
+        	<property name="city" value="pune"></property>
+        	<property name="state" value="Maharashtra"></property>
+        </bean>
+        <bean id="edudtl" class="com.institute.bean.EducationDetails">
+        	<constructor-arg value="K.T.H.M.college Nashik"></constructor-arg>
+        	<constructor-arg value="83%"></constructor-arg>
+        	<constructor-arg value="2018"></constructor-arg>
+        </bean>
+        <bean id="stud1" class="com.institute.bean.Student">
+        	<constructor-arg value="11"></constructor-arg>
+        	<constructor-arg value="Pqr"></constructor-arg>
+        	<constructor-arg ref="addr"></constructor-arg> <!-- DI by using CI  -->
+        	<constructor-arg ref="edudtl"></constructor-arg><!-- DI by using CI -->
+        </bean>
+</beans>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+       <bean id="emp" class="com.institute.bean.Employee">
+       		<constructor-arg value="21212"></constructor-arg>
+       		<constructor-arg value="Abc"></constructor-arg>
+       		<constructor-arg value="27345.45"></constructor-arg>
+       		<constructor-arg>
+       			<list>
+       				<value>7878787878</value>
+       				<value>2312231212</value>
+       			</list>
+       		</constructor-arg>	
+       		<constructor-arg>
+       			<map>
+       				<entry key="101" value="pune"></entry>
+       				<entry key="121" value="nashik"></entry>
+       			</map>
+       		</constructor-arg>
+       		<constructor-arg>
+       			<list>
+       				<value>Pqr pvt.ltd</value>
+       				<value>Xyz pvt.ltd</value>
+       			</list>
+       		</constructor-arg>
+       		<constructor-arg>
+       			<set>
+       				<value>Core java</value>
+       				<value>Spring</value>
+       				<value>Advance Java</value>
+       			</set>
+       		</constructor-arg>
+       </bean>
+</beans>  

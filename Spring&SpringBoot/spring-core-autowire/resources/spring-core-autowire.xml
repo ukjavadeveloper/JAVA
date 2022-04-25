@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+       <bean id="emp" class="com.institute.bean.Employee">
+       		<property name="id" value="123"></property>
+       		<property name="name" value="Xyz"></property>
+       </bean>
+       
+       <bean id="emp1" class="com.institute.bean.Employee"  autowire="constructor">
+       		<constructor-arg index="0" value="222"></constructor-arg>
+			<constructor-arg index="1" value="Pqr"></constructor-arg>
+       </bean>
+      
+       <bean id="add" class="com.institute.bean.Address">
+       		<property name="city" value="Mumbai"></property>
+       </bean>
+       
+       <bean id="add1" class="com.institute.bean.Address">
+       		<property name="city" value="Mumbai"></property>
+       </bean>
+       <bean id="exp" class="com.institute.bean.Experience"  primary="true">
+       		<property name="companyname" value="xyz pvt.ltd"></property>
+       </bean>
+       <bean id="exp1" class="com.institute.bean.Experience">
+       		<property name="companyname" value="stud pvt.ltd"></property>
+       </bean>
+       
+</beans>
